@@ -1,0 +1,9 @@
+target:
+  build: .
+sut:
+  image: hirotakakato/serverspec
+  links:
+    - target
+  volumes:
+    - ./spec:/spec
+    - /var/run/docker.sock:/var/run/docker.sock
